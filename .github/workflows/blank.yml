@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "A Demo build"
+        run: echo "Hello ${{secrets.DOCKER_PASSWORD}}"
 
 
