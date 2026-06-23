@@ -1,10 +1,18 @@
 name: Hello World
-on: push
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'release/**'
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "A Demo build"
+        run: echo "Hello, ${{vars.MY_NAME}}"
 
 
